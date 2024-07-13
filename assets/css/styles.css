@@ -15,11 +15,18 @@ html {
   box-sizing: border-box;
 }
 
+header {
+    background-color: rgb(128, 231, 249);
+    height: 30px;
+}
+
 body {
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
   margin: 0;
+  background-image: url('../images/fuente-de-los-coyotes.jpg');
+  background-size: cover;
 }
 
 main {
@@ -37,8 +44,8 @@ textarea {
 }
 
 footer {
-    position: sticky;
-    bottom: 0;
+    background-color: black;
+    height: 25px;
 }
 
 /* Class Selectors */
@@ -51,6 +58,11 @@ footer {
     grid-column-end: 3;
 }
 
+#blog-content {
+    height: 300px;
+    resize: vertical;
+}
+
 #form-container {
     display: grid;
     grid-template-columns: auto auto;
@@ -61,16 +73,18 @@ footer {
 
 #side-panel {
     display: grid;
-    justify-content: center;   
+    justify-content: center;
+    grid-template-rows: 10% 90%;   
     padding: 20px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.64);
+    background-color: rgba(0, 0, 0, 0.751);
 }
 
 #welcome-back {
     text-align: center;
     padding: 10px;
     padding-bottom: 20px;
+    height: 10%;
 }
 
 /* Media Queries */
