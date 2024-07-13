@@ -1,20 +1,25 @@
 /* CSS Variables */
 :root {
-  
 }
 
 /* General Selector */
 * {
-  
 }
 
 /* Element Selectors */
 header {
-  
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
 }
 
 body {
-  
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  margin: 0;
 }
 
 main {
@@ -27,8 +32,16 @@ section {
     border: 2px solid black;
 }
 
-/* Class Selectors */
+textarea {
 
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+}
+
+/* Class Selectors */
 
 /* Id Selectors */
 
@@ -43,18 +56,21 @@ section {
     grid-template-columns: auto auto;
     justify-self: center;
     column-gap: 10px;
+    row-gap: 10px;
 }
 
 #side-panel {
     display: grid;
     justify-content: center;   
     padding: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.64);
 }
 
 #welcome-back {
+    text-align: center;
     padding: 10px;
+    padding-bottom: 20px;
 }
-
-
 
 /* Media Queries */
