@@ -29,6 +29,32 @@ section {
 
 /* Class Selectors */
 
+
 /* Id Selectors */
+
+#blog-content-container {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#form-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-self: center;
+    column-gap: 10px;
+}
+
+#side-panel {
+    display: grid;
+    justify-content: center;   
+    padding: 20px;
+}
+
+#welcome-back {
+    padding: 10px;
+}
+
+
 
 /* Media Queries */
