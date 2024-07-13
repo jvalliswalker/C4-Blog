@@ -17,6 +17,16 @@ body {
   
 }
 
+main {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    justify-content: center;
+}
+
+section {
+    border: 2px solid black;
+}
+
 /* Class Selectors */
 
 /* Id Selectors */
