@@ -54,72 +54,12 @@ footer {
 }
 
 /* Class Selectors */
-.side-column-full-width {
-  display: grid;
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
 
-.blog-card {
-    margin: 10px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.762);
-}
 
-.blog-card-title {
-    font-size: larger;
-    font-weight: bold;
-}
 
-.blog-card-username {
-    font-style: italic;
-}
-
-.blog-card-content {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-.primary-blog-card {
-}
-
-.secondary-blog-card {
-}
 
 /* Id Selectors */
 
-#form-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 10px;
-  row-gap: 10px;
-}
 
-#input-blog-content {
-  height: 300px;
-  resize: vertical;
-}
-
-#main-panel {
-  display: grid;
-  grid-template-columns: 60% 40%;
-}
-
-#side-panel {
-  display: grid;
-  justify-content: center;
-  grid-template-rows: 10% 90%;
-  padding: 1%;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.751);
-}
-
-#welcome-back {
-  text-align: center;
-  padding: 10px;
-  padding-bottom: 20px;
-  height: 10%;
-}
 
 /* Media Queries */
