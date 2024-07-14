@@ -13,6 +13,12 @@ header {
 body {
 }
 
+main {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  justify-content: center;
+}
+
 /* Class Selectors */
 .side-column-full-width {
   display: grid;
@@ -48,5 +54,18 @@ body {
 }
 
 /* Id Selectors */
+#main-panel {
+  display: grid;
+  justify-content: center;
+}
+
+#side-panel {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 10% 90%;
+  padding: 1%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.751);
+}
 
 /* Media Queries */

@@ -30,11 +30,7 @@ body {
   background-size: cover;
 }
 
-main {
-  display: grid;
-  grid-template-columns: 70% 30%;
-  justify-content: center;
-}
+
 
 section {
   border: 2px solid black;

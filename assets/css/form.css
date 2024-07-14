@@ -16,20 +16,6 @@ body {
 /* Class Selectors */
 
 /* Id Selectors */
-#main-panel {
-  display: grid;
-  grid-template-columns: 60% 40%;
-}
-
-#side-panel {
-  display: grid;
-  justify-content: center;
-  grid-template-rows: 10% 90%;
-  padding: 1%;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.751);
-}
-
 #form-container {
   display: grid;
   grid-template-columns: auto auto;
@@ -48,4 +34,5 @@ body {
   padding-bottom: 20px;
   height: 10%;
 }
+
 /* Media Queries */
