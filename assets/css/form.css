@@ -13,7 +13,25 @@ header {
 body {
 }
 
+section {
+  display: grid;
+  margin-left: 30%;
+  margin-right: 30%;
+  height: 100%;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.751);
+  grid-template-rows: 10% 90%;
+  padding: 1%;
+  color: white;
+}
+
 /* Class Selectors */
+
+.full-width {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
 
 /* Id Selectors */
 #form-container {
@@ -26,6 +44,10 @@ body {
 #input-blog-content {
   height: 300px;
   resize: vertical;
+}
+
+#submit-button-container {
+    margin-top: 10px;
 }
 
 #welcome-back {
