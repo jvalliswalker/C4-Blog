@@ -62,7 +62,8 @@ footer {
 
 .blog-card {
     margin: 10px;
-    background-color: white;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.762);
 }
 
 .blog-card-title {
@@ -72,6 +73,12 @@ footer {
 
 .blog-card-username {
     font-style: italic;
+}
+
+.blog-card-content {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .primary-blog-card {
