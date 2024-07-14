@@ -16,8 +16,8 @@ html {
 }
 
 header {
-    background-color: rgb(128, 231, 249);
-    height: 30px;
+  background-color: rgb(128, 231, 249);
+  height: 30px;
 }
 
 body {
@@ -25,66 +25,63 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   margin: 0;
-  background-image: url('../images/fuente-de-los-coyotes.jpg');
+  background-image: url("../images/fuente-de-los-coyotes.jpg");
   background-size: cover;
 }
 
 main {
-    display: grid;
-    grid-template-columns: 70% 30%;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  justify-content: center;
 }
 
 section {
-    border: 2px solid black;
+  border: 2px solid black;
 }
 
 textarea {
-
 }
 
 footer {
-    background-color: black;
-    height: 25px;
+  background-color: black;
+  height: 25px;
 }
 
 /* Class Selectors */
+.side-column-full-width {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
 
 /* Id Selectors */
 
-#blog-content-container {
-    display: grid;
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
 #blog-content {
-    height: 300px;
-    resize: vertical;
+  height: 300px;
+  resize: vertical;
 }
 
 #form-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-self: center;
-    column-gap: 10px;
-    row-gap: 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10px;
+  row-gap: 10px;
 }
 
 #side-panel {
-    display: grid;
-    justify-content: center;
-    grid-template-rows: 10% 90%;   
-    padding: 20px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.751);
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 10% 90%;
+  padding: 1%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.751);
 }
 
 #welcome-back {
-    text-align: center;
-    padding: 10px;
-    padding-bottom: 20px;
-    height: 10%;
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 20px;
+  height: 10%;
 }
 
 /* Media Queries */
