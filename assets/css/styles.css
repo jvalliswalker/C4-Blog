@@ -62,16 +62,16 @@ footer {
 
 /* Id Selectors */
 
-#blog-content {
-  height: 300px;
-  resize: vertical;
-}
-
 #form-container {
   display: grid;
   grid-template-columns: auto auto;
   column-gap: 10px;
   row-gap: 10px;
+}
+
+#input-blog-content {
+    height: 300px;
+    resize: vertical;
 }
 
 #side-panel {
