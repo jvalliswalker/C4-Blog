@@ -1,5 +1,6 @@
 /* CSS Variables */
 :root {
+    --color-teal: rgb(128, 231, 249);
 }
 
 /* General Selector */
@@ -16,7 +17,7 @@ html {
 }
 
 header {
-  background-color: rgb(128, 231, 249);
+  background-color: var(--color-teal);
   height: 30px;
 }
 
@@ -40,6 +41,11 @@ section {
 }
 
 textarea {
+}
+
+button {
+    background-color: var(--color-teal);
+    font-weight: bold;
 }
 
 footer {
