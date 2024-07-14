@@ -1,6 +1,6 @@
 /* CSS Variables */
 :root {
-    --color-teal: rgb(128, 231, 249);
+  --color-teal: rgb(128, 231, 249);
 }
 
 /* General Selector */
@@ -44,8 +44,8 @@ textarea {
 }
 
 button {
-    background-color: var(--color-teal);
-    font-weight: bold;
+  background-color: var(--color-teal);
+  font-weight: bold;
 }
 
 footer {
@@ -60,6 +60,26 @@ footer {
   grid-column-end: 3;
 }
 
+.blog-card {
+    margin: 10px;
+    background-color: white;
+}
+
+.blog-card-title {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.blog-card-username {
+    font-style: italic;
+}
+
+.primary-blog-card {
+}
+
+.secondary-blog-card {
+}
+
 /* Id Selectors */
 
 #form-container {
@@ -70,8 +90,13 @@ footer {
 }
 
 #input-blog-content {
-    height: 300px;
-    resize: vertical;
+  height: 300px;
+  resize: vertical;
+}
+
+#main-panel {
+  display: grid;
+  grid-template-columns: 60% 40%;
 }
 
 #side-panel {
