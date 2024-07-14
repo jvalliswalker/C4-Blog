@@ -14,7 +14,7 @@ function storeBlogEntry(event) {
   // Check if clicked button is submit button
   if (
     event.target.tagName == "BUTTON" &&
-    event.target.id == "submit-blog-post"
+    event.target.id == "submit-button"
   ) {
     event.preventDefault();
 
@@ -31,5 +31,8 @@ function storeBlogEntry(event) {
 
     // Stringify existing posts and set to local storage
     localStorage.setItem("existing-posts", JSON.stringify(existingPosts));
+
+    // Redirect to blog page
+    location.href = 'blog.html';
   }
 }
