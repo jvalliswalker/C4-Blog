@@ -11,46 +11,66 @@ header {
 }
 
 main {
-  display: grid;
   margin-left: 30%;
   margin-right: 30%;
-  justify-content: center;
+  padding-left: 5vh;
+  padding-right: 5vh;
   background-color: rgba(0, 0, 0, 0.751);
-  grid-template-rows: 10% 90%;
-  padding: 1%;
   color: white;
+}
+
+form {
+  margin-top: 50px;
 }
 
 /* Class Selectors */
 
-.full-width {
-  display: grid;
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
 
 /* Id Selectors */
 #form-container {
   display: grid;
+  grid-template-areas: 
+    'welcome welcome'
+    'username title'
+    'content content'
+    'submit submit';
   grid-template-columns: auto auto;
+  grid-template-rows: 1fr 1fr 8fr 1fr;
   column-gap: 10px;
   row-gap: 10px;
 }
 
+#blog-content-container {
+  display: grid;
+  grid-template-rows: auto 90%;
+  align-content: center;
+  grid-area: content;
+}
+
 #input-blog-content {
-  height: 300px;
-  resize: vertical;
+  display: grid;
+  overflow: auto;
+  resize: none;
 }
 
 #submit-button-container {
-    margin-top: 10px;
+  display: grid;
+  grid-area: submit;
+    /* margin-top: 10px; */
 }
 
 #welcome-back {
+  grid-area: welcome;
   text-align: center;
-  padding: 10px;
-  padding-bottom: 20px;
-  height: 10%;
 }
 
 /* Media Queries */
+
+@media (max-width: 970px) {
+  main {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
