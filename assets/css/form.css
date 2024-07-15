@@ -10,14 +10,10 @@
 header {
 }
 
-body {
-}
-
-section {
+main {
   display: grid;
   margin-left: 30%;
   margin-right: 30%;
-  height: 100%;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.751);
   grid-template-rows: 10% 90%;
