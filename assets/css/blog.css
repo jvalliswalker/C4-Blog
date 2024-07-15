@@ -11,11 +11,12 @@ header {
 }
 
 body {
+  height: 100%;
 }
 
 main {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 60% 30% 10%;
   justify-content: center;
 }
 
@@ -47,24 +48,30 @@ main {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.primary-blog-card {
-}
-
-.secondary-blog-card {
-}
 
 /* Id Selectors */
 #main-panel {
   display: grid;
   justify-content: center;
+  grid-template-columns: [col-main] 3fr [col-side] 2fr;
+  grid-auto-flow: column;
 }
 
+#older-posts {
+  overflow: scroll;
+}
+
+.secondary-blogs-column {
+  /* height: 100px; */
+}
+
+
 #side-panel {
-  display: grid;
+  /* display: grid;
   justify-content: center;
   grid-template-rows: 10% 90%;
   padding: 1%;
-  color: white;
+  color: white; */
   background-color: rgba(0, 0, 0, 0.751);
 }
 

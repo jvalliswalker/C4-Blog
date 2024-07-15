@@ -12,6 +12,8 @@ header {
 }
 
 html {
+  /* display: grid; */
+  /* grid-template-rows: auto 1fr auto; */
   height: 100%;
   box-sizing: border-box;
 }
@@ -19,18 +21,30 @@ html {
 header {
   background-color: var(--color-teal);
   height: 30px;
+  grid-area: header;
 }
 
 body {
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+    'header'
+    'main'
+    'footer';
   margin: 0;
   background-image: url("../images/fuente-de-los-coyotes.jpg");
   background-size: cover;
 }
 
+main {
+  grid-area: main;
+  overflow: auto;
+}
 
+footer {
+  grid-area: footer;
+}
 
 section {
   border: 2px solid black;
