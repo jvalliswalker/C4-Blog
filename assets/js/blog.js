@@ -12,12 +12,24 @@ populateExistingPostsDisplay();
 
 function populateExistingPostsDisplay() {
 
-  const mainPanel = document.getElementById('main-panel');
-
+  const mainPanel = document.getElementById('most-recent-post');
+  const sidePanel = document.getElementById('older-posts');
+  let first = true;
+  
   for(const blogPostObject of existingPosts){
+    let panelToPopulate;
     const displayCard = document.createElement('div');
     displayCard.classList.add('blog-card');
-    
+    if(first){ 
+      panelToPopulate = mainPanel;
+      displayCard.classList.add('primary-blog-card');
+      first = false;
+    }
+    else{
+      panelToPopulate = sidePanel;
+      displayCard.classList.add('secondary-blog-card');
+    }
+
     const userName = createBlogPostElement(blogPostObject, 'userName');
     const blogTitle = createBlogPostElement(blogPostObject, 'blogTitle');
     const blogContent = createBlogPostElement(blogPostObject, 'blogContent');
@@ -26,7 +38,7 @@ function populateExistingPostsDisplay() {
     displayCard.appendChild(userName);
     displayCard.appendChild(blogContent);
 
-    mainPanel.appendChild(displayCard);
+    panelToPopulate.appendChild(displayCard);
   }
 }
 
