@@ -21,9 +21,9 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-areas: 
-    'header'
-    'main'
-    'footer';
+  'header'
+  'main'
+  'footer';
   margin: 0;
   background-image: url("../images/fuente-de-los-coyotes.jpg");
   background-size: cover;
@@ -37,6 +37,28 @@ header {
 
 main {
   grid-area: main;
+}
+
+.inverted-filter {
+  filter: invert(100%);
+  transition: .3s ease-in-out;
+}
+
+.regular-filter {
+  filter: invert(0%);
+  transition: .3s ease-in-out;
+}
+
+.dark-header {
+  /* background-image: url("../images/fuente-de-los-coyotes.jpg");
+  background-size: cover; */
+  background-color: rgb(43, 43, 131);
+  transition: .3s ease-in-out;
+}
+
+.restored-header {
+  background-color: var(--color-teal);
+  transition: .3s ease-in-out;
 }
 
 footer {
@@ -66,3 +88,6 @@ footer {
 
 
 /* Media Queries */
+@media (max-width: 970px) {
+  /* placeholder */
+}
