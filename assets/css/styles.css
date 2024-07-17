@@ -43,10 +43,6 @@ footer {
   grid-area: footer;
 }
 
-section {
-  border: 2px solid black;
-}
-
 textarea {
 }
 
