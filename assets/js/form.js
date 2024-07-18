@@ -1,12 +1,3 @@
-// Start by querying local storage for already existing blog entries
-const existingPostsString = localStorage.getItem("existing-posts") == null ? '' : localStorage.getItem("existing-posts");
-
-// Set existingPosts to queried local storage data if that data
-// can be converted to an array, otherwise set as empty array
-const existingPosts = existingPostsString.startsWith("[")
-  ? JSON.parse(existingPostsString).sort(function (a, b){a.createdDate - b.createdDate})
-  : [];
-
 // Create button listener
 document.addEventListener("click", storeBlogEntry);
 
