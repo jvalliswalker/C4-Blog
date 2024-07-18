@@ -33,6 +33,12 @@ header {
   background-color: var(--color-teal);
   height: 30px;
   grid-area: header;
+
+  display: grid;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+  padding-left: 10px;
 }
 
 main {
@@ -74,8 +80,21 @@ button {
 }
 
 footer {
+  display: grid;
+  align-items: center;
+  font-size: small;
+  color: white;
+  padding-left: 10px;
   background-color: black;
-  height: 25px;
+  height: 30px;
+}
+
+footer div a {
+  color: var(--color-teal);
+}
+
+footer div a:visited {
+  color: var(--color-teal);
 }
 
 /* Class Selectors */
