@@ -35,7 +35,6 @@ header {
   grid-area: header;
 
   display: grid;
-  align-items: center;
   color: black;
   font-weight: bold;
   padding-left: 10px;
@@ -59,6 +58,7 @@ main {
   /* background-image: url("../images/fuente-de-los-coyotes.jpg");
   background-size: cover; */
   background-color: rgb(43, 43, 131);
+  color: white;
   transition: .3s ease-in-out;
 }
 
