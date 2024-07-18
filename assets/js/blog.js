@@ -9,15 +9,7 @@ document.body.addEventListener("click", handleModeChange);
 
 // Functions
 
-// Gets existing-posts local storage 
-// function extractLocalStorageData() {
-//   const existingPostsString = localStorage.getItem("existing-posts");
-
-//   if (existingPostsString != null && existingPostsString.startsWith("[")) {
-//     existingPosts = JSON.parse(existingPostsString);
-//   }
-// }
-
+// Toggle light/dark mode 
 function handleModeChange(event) {
   if (event.target.id == "sun-icon") {
     const blogCards = document.querySelectorAll(".blog-card");
@@ -49,7 +41,6 @@ function handleModeChange(event) {
       sunIcon.setAttribute(
         'src', 'https://openclipart.org/image/800px/170669'
       );
-;
     }
 
     isDarkMode = !isDarkMode;
@@ -73,6 +64,7 @@ function sortByDate(a, b){
   }
 }
 
+// Create elements on page for blog posts stored in localStorage
 function populateExistingPostsDisplay() {
   const mainPanel = document.getElementById("most-recent-post");
   const sidePanel = document.getElementById("older-posts");
@@ -108,6 +100,7 @@ function populateExistingPostsDisplay() {
   }
 }
 
+// Create HTML element for parent div from passed object and property
 function createBlogPostElement(blogPostObject, blogPostProperty) {
   const blogPostElementToClassMap = {
     blogTitle: "blog-card-title",
