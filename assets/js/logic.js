@@ -1,13 +1,17 @@
-
+// Variables //
 const header = document.querySelector('header');
 const footer = document.querySelector('footer');
 const profileHyperlink = 'https://jvalliswalker.github.io/C2-Profile/';
 let existingPosts = [];
 
+
+// Script //
 extractLocalStorageData();
 populateHeader();
 populateFooter();
 
+
+// Functions //
 
 // Gets existing-posts local storage 
 function extractLocalStorageData() {
@@ -18,6 +22,7 @@ function extractLocalStorageData() {
   }
 }
 
+// Create standard headers across pages
 function populateHeader() {
   const headerDiv = document.createElement('div');
   
@@ -26,6 +31,7 @@ function populateHeader() {
   header.appendChild(headerDiv);
 }
 
+// Create standard footers across pages
 function populateFooter() {
   const footerDiv = document.createElement('div');
   const profileAnchor = document.createElement('a');
@@ -39,7 +45,4 @@ function populateFooter() {
   footerDiv.appendChild(profileAnchor);
 
   footer.appendChild(footerDiv);
-
-  // <div>Site by <a href='https://jvalliswalker.github.io/C2-Profile/' target="_blank">Jamil Vallis-Walker</a></div>
-
 }
