@@ -1,20 +1,23 @@
-// Start by querying local storage for already existing blog entries
-const existingPostsString =
-  localStorage.getItem("existing-posts") == null
-    ? ""
-    : localStorage.getItem("existing-posts");
+// Variables
+let existingPosts = [];
+let isDarkMode = false;
 
-// Set existingPosts to queried local storage data if that data
-// can be converted to an array, otherwise set as empty array
-const existingPosts = existingPostsString.startsWith("[")
-  ? JSON.parse(existingPostsString).sort(function (a, b) {
-      a.createdDate - b.createdDate;
-    })
-  : [];
-
+// Script
+extractLocalStorageData();
+populateExistingPostsDisplay();
 document.body.addEventListener("click", handleModeChange);
 
-let isDarkMode = false;
+
+// Functions
+
+// Gets existing-posts local storage 
+function extractLocalStorageData() {
+  const existingPostsString = localStorage.getItem("existing-posts");
+
+  if (existingPostsString != null && existingPostsString.startsWith("[")) {
+    existingPosts = JSON.parse(existingPostsString);
+  }
+}
 
 function handleModeChange(event) {
   if (event.target.id == "sun-icon") {
@@ -54,14 +57,34 @@ function handleModeChange(event) {
   }
 }
 
-populateExistingPostsDisplay();
+// Sorts passed Blog post objects by created date, putting most
+// recently created posts first
+function sortByDate(a, b){
+  const dateA = new Date(a.createdDate);
+  const dateB = new Date(b.createdDate);
+
+  if (dateA < dateB){
+    return 1;
+  }
+  else if (dateA > dateB){
+    return -1
+  }
+  else {
+    return 0;
+  }
+}
 
 function populateExistingPostsDisplay() {
   const mainPanel = document.getElementById("most-recent-post");
   const sidePanel = document.getElementById("older-posts");
   let first = true;
 
+  if(existingPosts.length > 0){
+    existingPosts.sort(sortByDate);
+  }
+
   for (const blogPostObject of existingPosts) {
+    console.log(Date(blogPostObject.createdDate));
     let panelToPopulate;
     const displayCard = document.createElement("div");
     displayCard.classList.add("blog-card");
