@@ -1,9 +1,8 @@
 // Variables
-let existingPosts = [];
+// let existingPosts = [];
 let isDarkMode = false;
 
 // Script
-extractLocalStorageData();
 populateExistingPostsDisplay();
 document.body.addEventListener("click", handleModeChange);
 
@@ -11,13 +10,13 @@ document.body.addEventListener("click", handleModeChange);
 // Functions
 
 // Gets existing-posts local storage 
-function extractLocalStorageData() {
-  const existingPostsString = localStorage.getItem("existing-posts");
+// function extractLocalStorageData() {
+//   const existingPostsString = localStorage.getItem("existing-posts");
 
-  if (existingPostsString != null && existingPostsString.startsWith("[")) {
-    existingPosts = JSON.parse(existingPostsString);
-  }
-}
+//   if (existingPostsString != null && existingPostsString.startsWith("[")) {
+//     existingPosts = JSON.parse(existingPostsString);
+//   }
+// }
 
 function handleModeChange(event) {
   if (event.target.id == "sun-icon") {

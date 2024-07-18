@@ -2,9 +2,21 @@
 const header = document.querySelector('header');
 const footer = document.querySelector('footer');
 const profileHyperlink = 'https://jvalliswalker.github.io/C2-Profile/';
+let existingPosts = [];
 
+extractLocalStorageData();
 populateHeader();
 populateFooter();
+
+
+// Gets existing-posts local storage 
+function extractLocalStorageData() {
+  const existingPostsString = localStorage.getItem("existing-posts");
+
+  if (existingPostsString != null && existingPostsString.startsWith("[")) {
+    existingPosts = JSON.parse(existingPostsString);
+  }
+}
 
 function populateHeader() {
   const headerDiv = document.createElement('div');
