@@ -7,7 +7,7 @@ let existingPosts = [];
 
 // Script //
 extractLocalStorageData();
-populateHeader();
+// populateHeader();
 populateFooter();
 
 
@@ -22,14 +22,14 @@ function extractLocalStorageData() {
   }
 }
 
-// Create standard headers across pages
-function populateHeader() {
-  const headerDiv = document.createElement('div');
+// // Create standard headers across pages
+// function populateHeader() {
+//   const headerDiv = document.createElement('div');
   
-  headerDiv.innerText = 'My Fancy Blog';
+//   headerDiv.innerText = 'My Fancy Blog';
 
-  header.appendChild(headerDiv);
-}
+//   header.appendChild(headerDiv);
+// }
 
 // Create standard footers across pages
 function populateFooter() {
