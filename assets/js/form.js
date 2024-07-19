@@ -23,7 +23,6 @@ function validatePost(){
 
       if(key != 'createdDate'){
         const element = blogPost[key];
-        console.log('el: '+element);
         
         if(element.value == null || element.value.length < 3){
           element.classList.add('invalid');
@@ -32,7 +31,6 @@ function validatePost(){
         }
         else {
           element.classList.remove('invalid');
-          console.log('elment.value: '+element.value);
           blogPost[key] = element.value;
         }
       }
