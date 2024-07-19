@@ -31,13 +31,26 @@ body {
 
 header {
   background-color: var(--color-teal);
-  height: 30px;
+  height: 45px;
   grid-area: header;
 
   display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
   color: black;
   font-weight: bold;
-  padding-left: 10px;
+}
+
+nav {
+  display: flex;
+  padding-right: 15px;
+}
+
+nav div {
+  display: grid;
+  align-items: center;
+  padding-right: 25px;
 }
 
 main {
@@ -98,9 +111,13 @@ footer div a:visited {
 }
 
 /* Class Selectors */
+.page-title {
+  padding-left: 15px;
+}
 
-
-
+.nav-item {
+  cursor: pointer;
+}
 
 /* Id Selectors */
 
