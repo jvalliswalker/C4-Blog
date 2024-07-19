@@ -24,7 +24,10 @@ form {
 }
 
 /* Class Selectors */
-
+.invalid {
+  box-shadow: 0 0 5px red;
+  border: 2px solid red;
+}
 
 /* Id Selectors */
 #form-container {
