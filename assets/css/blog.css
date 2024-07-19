@@ -29,9 +29,12 @@ main {
 }
 
 .blog-card {
+  display: flex;
+  flex-direction: column;
   margin: 10px;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.762);
+  max-height: 300px;
 }
 
 .blog-card-title {
@@ -47,8 +50,13 @@ main {
   margin-top: 20px;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.9);
+  overflow-y: auto;
+  overflow-wrap: anywhere;
 }
 
+.primary-blog-card {
+  max-height: 82vh;
+}
 
 /* Id Selectors */
 #main-panel {
@@ -59,7 +67,8 @@ main {
 }
 
 #most-recent-post {
-  display: grid;
+  /* display: grid;
+  height: 100%; */
 }
 
 #older-posts {
