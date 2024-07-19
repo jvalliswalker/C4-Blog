@@ -75,7 +75,6 @@ function populateExistingPostsDisplay() {
   }
 
   for (const blogPostObject of existingPosts) {
-    console.log(Date(blogPostObject.createdDate));
     let panelToPopulate;
     const displayCard = document.createElement("div");
     displayCard.classList.add("blog-card");
