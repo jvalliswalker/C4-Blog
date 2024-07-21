@@ -23,7 +23,7 @@ function handleModeChange(event) {
       });
       
       header.classList.remove('dark-header');
-      header.classList.add('restored-header');
+      document.body.classList.remove('dark-scrollbar');
       
       sunIcon.setAttribute(
         'src', 'https://openclipart.org/image/800px/27381'
@@ -35,8 +35,8 @@ function handleModeChange(event) {
         card.classList.add("inverted-filter")
       });
       
-      header.classList.remove('restored-header');
       header.classList.add('dark-header');
+      document.body.classList.add('dark-scrollbar');
       
       sunIcon.setAttribute(
         'src', 'https://openclipart.org/image/800px/170669'

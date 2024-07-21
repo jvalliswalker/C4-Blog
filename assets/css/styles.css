@@ -1,15 +1,16 @@
 /* CSS Variables */
 :root {
   --color-teal: rgb(128, 231, 249);
+  --color-darkmode-blue: rgb(43, 43, 131);
 }
 
 /* General Selector */
 * {
-  scrollbar-color: rgba(128, 231, 249, 0.832) rgba(111, 111, 111, 0);
 }
 
 /* Element Selectors */
 header {
+  transition: .3s ease-in-out;
 }
 
 html {
@@ -32,7 +33,7 @@ body {
 
 header {
   background-color: var(--color-teal);
-  height: 45px;
+  height: 46px;
   grid-area: header;
 
   display: grid;
@@ -69,15 +70,18 @@ main {
 }
 
 .dark-header {
-  /* background-image: url("../images/fuente-de-los-coyotes.jpg");
-  background-size: cover; */
-  background-color: rgb(43, 43, 131);
+  background-color: var(--color-darkmode-blue);
   color: white;
   transition: .3s ease-in-out;
 }
 
-.restored-header {
-  background-color: var(--color-teal);
+.light-scrollbar {
+  scrollbar-color: rgba(128, 231, 249, 0.832) rgba(111, 111, 111, 0);
+  transition: .3s ease-in-out;
+}
+
+.dark-scrollbar {
+  scrollbar-color: var(--color-darkmode-blue) rgba(111, 111, 111, 0);
   transition: .3s ease-in-out;
 }
 
