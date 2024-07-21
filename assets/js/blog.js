@@ -5,9 +5,14 @@ let isDarkMode = false;
 // Execution
 populateExistingPostsDisplay();
 document.body.addEventListener("click", handleModeChange);
+document.getElementById('navigate-back').addEventListener("click", navigateToLandingPage);
 
 
 // Functions
+function navigateToLandingPage(){
+  location.href = 'index.html';
+}
+
 
 // Toggle light/dark mode 
 function handleModeChange(event) {
