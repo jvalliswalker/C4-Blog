@@ -2,7 +2,7 @@
 // let existingPosts = [];
 let isDarkMode = false;
 
-// Script
+// Execution
 populateExistingPostsDisplay();
 document.body.addEventListener("click", handleModeChange);
 
@@ -66,36 +66,27 @@ function sortByDate(a, b){
 
 // Create elements on page for blog posts stored in localStorage
 function populateExistingPostsDisplay() {
-  const mainPanel = document.getElementById("most-recent-post");
-  const sidePanel = document.getElementById("older-posts");
-  let first = true;
+  const mainPanel = document.getElementById("blog-posts");
 
   if(existingPosts.length > 0){
     existingPosts.sort(sortByDate);
   }
 
   for (const blogPostObject of existingPosts) {
-    let panelToPopulate;
     const displayCard = document.createElement("div");
     displayCard.classList.add("blog-card");
-    if (first) {
-      panelToPopulate = mainPanel;
-      displayCard.classList.add("primary-blog-card");
-      first = false;
-    } else {
-      panelToPopulate = sidePanel;
-      displayCard.classList.add("secondary-blog-card");
-    }
 
-    const userName = createBlogPostElement(blogPostObject, "userName");
     const blogTitle = createBlogPostElement(blogPostObject, "blogTitle");
+    const userName = createBlogPostElement(blogPostObject, "userName");
+    const createdDate = createBlogPostElement(blogPostObject, "createdDate");
     const blogContent = createBlogPostElement(blogPostObject, "blogContent");
 
     displayCard.appendChild(blogTitle);
     displayCard.appendChild(userName);
+    displayCard.appendChild(createdDate);
     displayCard.appendChild(blogContent);
 
-    panelToPopulate.appendChild(displayCard);
+    mainPanel.appendChild(displayCard);
   }
 }
 
@@ -104,16 +95,24 @@ function createBlogPostElement(blogPostObject, blogPostProperty) {
   const blogPostElementToClassMap = {
     blogTitle: "blog-card-title",
     userName: "blog-card-username",
-    blogContent: "blog-card-content",
+    createdDate: 'blog-created-date',
+    blogContent: "blog-card-content"
   };
 
   const element = document.createElement("div");
   element.classList.add(blogPostElementToClassMap[blogPostProperty]);
 
-  element.innerHTML =
-    blogPostProperty == "userName"
-      ? `Written by ${blogPostObject[blogPostProperty]}`
-      : blogPostObject[blogPostProperty];
+  switch(blogPostProperty) {
+    case 'userName':
+      element.innerHTML = `Written by ${blogPostObject[blogPostProperty]}`;
+      break;
+    case 'createdDate':
+      const date = new Date(blogPostObject[blogPostProperty]);
+      element.innerHTML = date.toLocaleString();
+      break;
+    default:
+      element.innerHTML = blogPostObject[blogPostProperty];
+  }
 
   return element;
 }

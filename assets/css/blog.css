@@ -16,7 +16,7 @@ body {
 
 main {
   display: grid;
-  grid-template-columns: 60% 40%;
+  margin: 0 25%;
   justify-content: center;
   overflow: auto; /* This prevents the blog page from stretching to fit additional content */
 }
@@ -28,7 +28,7 @@ main {
   margin: 10px;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.762);
-  max-height: 300px;
+  max-height: 400px;
 }
 
 .blog-card-title {
@@ -37,6 +37,10 @@ main {
 }
 
 .blog-card-username {
+  font-style: italic;
+}
+
+.blog-created-date {
   font-style: italic;
 }
 
@@ -53,20 +57,8 @@ main {
 }
 
 /* Id Selectors */
-#main-panel {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: [col-main] 3fr [col-side] 2fr;
-  grid-auto-flow: column;
-}
-
-#most-recent-post {
-  /* display: grid;
-  height: 100%; */
-}
-
-#older-posts {
-  overflow: auto;
+#blog-posts {
+  overflow-y: auto;
 }
 
 #sun-icon {
