@@ -5,29 +5,32 @@
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>HTML 5 Boilerplate</title>
+    <!-- General site styling -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <!-- Page specific styling -->
     <link rel="stylesheet" href="./assets/css/blog.css" />
   </head>
   <body class="light-scrollbar">
     <header>
-      <div class="page-title">
-        My First Blog
-      </div>
+      <div class="page-title">My First Blog</div>
       <nav>
         <div class="nav-item" id="navigate-back">Back</div>
+        <!-- Light/dark mode icon/button -->
         <img
-        src="https://openclipart.org/image/800px/27381"
-        id="sun-icon"
-        alt="sun"
-      />
+          src="https://openclipart.org/image/800px/27381"
+          id="sun-icon"
+          alt="sun"
+        />
       </nav>
     </header>
     <main>
+      <!-- Blog posts, populated from localStorage via Javascript -->
       <section id="blog-posts"></section>
     </main>
-    <footer>
-    </footer>
+    <footer></footer>
+    <!-- General site logic -->
     <script src="./assets/js/logic.js" defer></script>
+    <!-- Page specific logic -->
     <script src="./assets/js/blog.js" defer></script>
   </body>
 </html>
