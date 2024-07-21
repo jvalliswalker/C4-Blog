@@ -62,7 +62,10 @@ main {
 }
 
 #sun-icon {
-  padding-top: 3px;
+  border-radius: 25px;
+  padding: 5px;
+  margin-top: 1px;
+  margin-bottom: 1px;
   height: 30px;
   width: auto;
   cursor: pointer;
