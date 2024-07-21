@@ -29,6 +29,10 @@ form {
   border: 2px solid red;
 }
 
+.field-container {
+  display: grid;
+}
+
 /* Id Selectors */
 #form-container {
   display: grid;
