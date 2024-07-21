@@ -11,14 +11,13 @@ header {
 }
 
 body {
-
 }
 
 main {
   display: grid;
   margin: 0 25%;
   justify-content: center;
-  overflow: auto; /* This prevents the blog page from stretching to fit additional content */
+  overflow: auto; /* Prevents the blog page from stretching to fit additional content */
 }
 
 /* Class Selectors */
@@ -29,6 +28,14 @@ main {
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.762);
   max-height: 400px;
+}
+
+.blog-card-content {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow-y: auto;
+  overflow-wrap: anywhere;
 }
 
 .blog-card-title {
@@ -42,18 +49,6 @@ main {
 
 .blog-created-date {
   font-style: italic;
-}
-
-.blog-card-content {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.9);
-  overflow-y: auto;
-  overflow-wrap: anywhere;
-}
-
-.primary-blog-card {
-  max-height: 80vh;
 }
 
 /* Id Selectors */
