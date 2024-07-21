@@ -24,7 +24,7 @@ function validatePost(){
       if(key != 'createdDate'){
         const element = blogPost[key];
         
-        if(element.value == null || element.value.length < 3){
+        if(element.value == null || element.value.length < 1){
           element.classList.add('invalid');
           element.placeholder = 'This field is required';
           isValid = false;
@@ -40,6 +40,7 @@ function validatePost(){
       return blogPost;
     }
     else {
+      alert('Please make sure that all fields are populated');
       return null;
     }
 }
