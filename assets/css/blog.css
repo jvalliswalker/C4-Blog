@@ -1,0 +1,68 @@
+/* CSS Variables */
+:root {
+}
+
+/* General Selector */
+* {
+}
+
+/* Element Selectors */
+header {
+}
+
+body {
+}
+
+main {
+  display: grid;
+  margin: 0 25%;
+  overflow: auto; /* Prevents the blog page from stretching to fit additional content */
+}
+
+/* Class Selectors */
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.762);
+  max-height: 400px;
+}
+
+.blog-card-content {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow-y: auto;
+  overflow-wrap: anywhere;
+}
+
+.blog-card-title {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.blog-card-username {
+  font-style: italic;
+}
+
+.blog-created-date {
+  font-style: italic;
+}
+
+/* Id Selectors */
+#blog-posts {
+  overflow-y: auto;
+}
+
+#sun-icon {
+  border-radius: 25px;
+  padding: 5px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  height: 30px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* Media Queries */

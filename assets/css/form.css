@@ -1,0 +1,84 @@
+/* CSS Variables */
+:root {
+}
+
+/* General Selector */
+* {
+}
+
+/* Element Selectors */
+header {
+}
+
+main {
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  background-color: rgba(0, 0, 0, 0.751);
+  color: white;
+}
+
+form {
+  margin-top: 50px;
+}
+
+/* Class Selectors */
+.field-container {
+  display: grid;
+}
+
+.invalid {
+  box-shadow: 0 0 5px red;
+  border: 2px solid red;
+}
+
+/* Id Selectors */
+#blog-content-container {
+  display: grid;
+  grid-template-rows: auto 90%;
+  align-content: center;
+  grid-area: content;
+}
+
+#form-container {
+  display: grid;
+  /* Apply grid template areas, sourced from https://www.youtube.com/watch?v=RhUuMl3R1PE */
+  grid-template-areas:
+    "welcome welcome"
+    "username title"
+    "content content"
+    "submit submit";
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr 1fr 8fr 1fr;
+  column-gap: 25px;
+  row-gap: 10px;
+}
+
+#input-blog-content {
+  display: grid;
+  overflow: auto;
+  resize: none;
+}
+
+#submit-button-container {
+  display: grid;
+  grid-area: submit;
+  /* margin-top: 10px; */
+}
+
+#welcome-back {
+  grid-area: welcome;
+  text-align: center;
+}
+
+/* Media Queries */
+
+@media (max-width: 970px) {
+  main {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

@@ -1,0 +1,132 @@
+/* CSS Variables */
+:root {
+  --color-teal: rgb(128, 231, 249);
+  --color-darkmode-blue: rgb(43, 43, 131);
+}
+
+/* General Selector */
+* {
+  font-family: system-ui, serif;
+}
+
+/* Element Selectors */
+header {
+  font-size: larger;
+  transition: 0.3s ease-in-out;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  /* Creates "sticky" header/footer, sourced from https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers */
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /* Apply grid template areas, sourced from https://www.youtube.com/watch?v=RhUuMl3R1PE */
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  margin: 0;
+  background-image: url("../images/fuente-de-los-coyotes.jpg");
+  background-size: cover;
+}
+
+header {
+  background-color: var(--color-teal);
+  height: 46px;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  padding-right: 15px;
+}
+
+nav div {
+  display: grid;
+  align-items: center;
+  padding-right: 25px;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+button {
+  background-color: var(--color-teal);
+  font-weight: bold;
+}
+
+footer {
+  display: grid;
+  align-items: center;
+  font-size: small;
+  color: white;
+  padding-left: 10px;
+  background-color: black;
+  height: 30px;
+}
+
+footer div a {
+  color: var(--color-teal);
+}
+
+footer div a:visited {
+  color: var(--color-teal);
+}
+
+/* Class Selectors */
+.dark-header {
+  background-color: var(--color-darkmode-blue);
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.dark-scrollbar {
+  scrollbar-color: var(--color-darkmode-blue) rgba(111, 111, 111, 0);
+  transition: 0.3s ease-in-out;
+}
+
+.inverted-filter {
+  filter: invert(100%);
+  transition: 0.3s ease-in-out;
+}
+
+.light-scrollbar {
+  scrollbar-color: rgba(128, 231, 249, 0.832) rgba(111, 111, 111, 0);
+  transition: 0.3s ease-in-out;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.page-title {
+  padding-left: 15px;
+}
+
+.regular-filter {
+  filter: invert(0%);
+  transition: 0.3s ease-in-out;
+}
+
+/* Id Selectors */
+
+/* Media Queries */
+@media (max-width: 970px) {
+  /* placeholder */
+}
