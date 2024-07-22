@@ -6,7 +6,7 @@ In this assignment, we were instructed to create a simple blog interface, storin
 
 ![Assignment Screenshot](./assets/images/assignment_screenshot.png "Assignment Screenshot")
 
-
+Project Link: https://jvalliswalker.github.io/C4-Blog/index.html
 
 ## Code References
 Below are sources for code I referenced during this project.
